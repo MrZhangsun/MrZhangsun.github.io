@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="土豆就是我">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://mrzhangsun.github.io">
+    <!--SEO-->
+
+<meta name="description" content="描述一下你的土豆"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>Kotlin基础语法 | 土豆就是我</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="土豆就是我" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Kotlin基础语法">
+            
+	            Kotlin基础语法
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Kotlin">
+               Kotlin
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/31</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p><strong>前言：</strong><br>&emsp;&emsp;上海百联大宗内部员工培训系统是为了给内部员工提供一个高素质培训平台，也是百联研发部新技术实验平台。该系统前期采用的是Vertx作为系统框架，以Kotlin作为开发语言，以Vue作为前台框架。将来还会有更多的新技术应用于该平台。作为平台的开发人员，为了满足开发的需求，所以学习了Kotlin, 现将基本语法整理出来供大家学习，同时也便于日后查看。</p>
+<h4 id="空类型用法："><a href="#空类型用法：" class="headerlink" title="空类型用法："></a>空类型用法：</h4><p><img src="/2017/12/31/Kotlin基础语法/1.png" alt="Kotlin"><br>as : 类型转换关键字/包别名<br>安全类型转换:<br>智能类型转换: </p>
+<h4 id="区间"><a href="#区间" class="headerlink" title="区间:"></a>区间:</h4><p><img src="/2017/12/31/Kotlin基础语法/2.png" alt="Kotlin"></p>
+<h4 id="数组的使用方法"><a href="#数组的使用方法" class="headerlink" title="数组的使用方法"></a>数组的使用方法</h4><p><img src="/2017/12/31/Kotlin基础语法/3.png" alt="Kotlin"></p>
+<h4 id="基本数据类型的数组"><a href="#基本数据类型的数组" class="headerlink" title="基本数据类型的数组"></a>基本数据类型的数组</h4><p><img src="/2017/12/31/Kotlin基础语法/4.png" alt="Kotlin"></p>
+<h4 id="常量与变量"><a href="#常量与变量" class="headerlink" title="常量与变量"></a>常量与变量</h4><p><img src="/2017/12/31/Kotlin基础语法/5.png" alt="Kotlin"></p>
+<h4 id="Lamd表达式"><a href="#Lamd表达式" class="headerlink" title="Lamd表达式"></a>Lamd表达式</h4><p><img src="/2017/12/31/Kotlin基础语法/6.png" alt="Kotlin"></p>
+<h4 id="Lamd表达式参数传递"><a href="#Lamd表达式参数传递" class="headerlink" title="Lamd表达式参数传递"></a>Lamd表达式参数传递</h4><p><img src="/2017/12/31/Kotlin基础语法/7.png" alt="Kotlin"></p>
+<h4 id="成员变量和局部变量的定义和区别："><a href="#成员变量和局部变量的定义和区别：" class="headerlink" title="成员变量和局部变量的定义和区别："></a>成员变量和局部变量的定义和区别：</h4><p>成员变量都是用val或var修饰的，而没有被这两个关键字修饰的变量都是局部变量<br><img src="/2017/12/31/Kotlin基础语法/8.png" alt="Kotlin"></p>
+<h4 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h4><p><img src="/2017/12/31/Kotlin基础语法/9.png" alt="Kotlin"></p>
+<h4 id="成员变量的访问控制"><a href="#成员变量的访问控制" class="headerlink" title="成员变量的访问控制"></a>成员变量的访问控制</h4><p><img src="/2017/12/31/Kotlin基础语法/10.png" alt="Kotlin"></p>
+<h4 id="运算符的定义"><a href="#运算符的定义" class="headerlink" title="运算符的定义"></a>运算符的定义</h4><p><img src="/2017/12/31/Kotlin基础语法/11.png" alt="Kotlin"></p>
+<h4 id="Kotlin关键字："><a href="#Kotlin关键字：" class="headerlink" title="Kotlin关键字："></a>Kotlin关键字：</h4><p><strong>operator:</strong>定义运算符<br><strong>infix:</strong>定义中缀表达式<br><strong>override:</strong>重写父类方法<br><strong>constructor:</strong>构造器<br><strong>const:</strong>定义编译期常量<br><strong>val:</strong>定义普通成员常量<br><strong>var:</strong>定义成员变量</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li><p>在Kotlin中when，if语句和Lamda表达式一样具有返回值，返回值为最后一行的值</p>
+</li>
+<li><p>在Kotlin中默认的类和方法都是final的，要继承重写必须用关键字open，或者设置成abstract类型，重写方法必须使用override关键字</p>
+</li>
+</ol>
+<h4 id="if表达式"><a href="#if表达式" class="headerlink" title="if表达式"></a>if表达式</h4><p><img src="/2017/12/31/Kotlin基础语法/12.png" alt="Kotlin"></p>
+<h4 id="when、continue-和-break"><a href="#when、continue-和-break" class="headerlink" title="when、continue 和 break"></a>when、continue 和 break</h4><p>when表达式，Java中switch的替代品, 循环关键字continue和break<br><img src="/2017/12/31/Kotlin基础语法/13.png" alt="Kotlin"></p>
+<h4 id="具名参数"><a href="#具名参数" class="headerlink" title="具名参数"></a>具名参数</h4><p><img src="/2017/12/31/Kotlin基础语法/14.png" alt="Kotlin"></p>
+<h4 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h4><p><img src="/2017/12/31/Kotlin基础语法/15.png" alt="Kotlin"></p>
+<h4 id="Sperat-Operator"><a href="#Sperat-Operator" class="headerlink" title="Sperat Operator"></a>Sperat Operator</h4><p><img src="/2017/12/31/Kotlin基础语法/16.png" alt="Kotlin"></p>
+<h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><p><img src="/2017/12/31/Kotlin基础语法/17.png" alt="Kotlin"></p>
+<h4 id="继承和实现"><a href="#继承和实现" class="headerlink" title="继承和实现"></a>继承和实现</h4><p><img src="/2017/12/31/Kotlin基础语法/18.png" alt="Kotlin"><br><img src="/2017/12/31/Kotlin基础语法/19.png" alt="Kotlin"><br><img src="/2017/12/31/Kotlin基础语法/20.png" alt="Kotlin"><br><img src="/2017/12/31/Kotlin基础语法/21.png" alt="Kotlin"></p>
+<h4 id="object"><a href="#object" class="headerlink" title="object"></a>object</h4><p><img src="/2017/12/31/Kotlin基础语法/22.png" alt="Kotlin"></p>
+<h4 id="静态方法的定义"><a href="#静态方法的定义" class="headerlink" title="静态方法的定义"></a>静态方法的定义</h4><p><img src="/2017/12/31/Kotlin基础语法/23.png" alt="Kotlin"><br><img src="/2017/12/31/Kotlin基础语法/24.png" alt="Kotlin"></p>
+<p><strong>方法签名：</strong>这是一个JVM概念，虚拟机根据方法签名来判断方法的唯一性，从而会存在方法的重载。方法返回值不属于方法签名</p>
+<p>lamd表达式是一种匿名函数</p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Murphy</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/12/31/Nginx简介/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2017/12/30/MySql触发器/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="https://github.com/MrZhangsun" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/"><i class="fa" aria-hidden="true">February 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/"><i class="fa" aria-hidden="true">January 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/"><i class="fa" aria-hidden="true">December 2016</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/"><i class="fa" aria-hidden="true">August 2016</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/"><i class="fa" aria-hidden="true">July 2016</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/"><i class="fa" aria-hidden="true">April 2016</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/"><i class="fa" aria-hidden="true">March 2016</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/"><i class="fa" aria-hidden="true">February 2016</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/"><i class="fa" aria-hidden="true">January 2016</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/"><i class="fa" aria-hidden="true">December 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/"><i class="fa" aria-hidden="true">November 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/"><i class="fa" aria-hidden="true">July 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/"><i class="fa" aria-hidden="true">June 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/"><i class="fa" aria-hidden="true">May 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/"><i class="fa" aria-hidden="true">April 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/"><i class="fa" aria-hidden="true">March 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/"><i class="fa" aria-hidden="true">December 2014</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/"><i class="fa" aria-hidden="true">November 2014</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/"><i class="fa" aria-hidden="true">August 2014</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/"><i class="fa" aria-hidden="true">April 2014</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/"><i class="fa" aria-hidden="true">March 2014</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/"><i class="fa" aria-hidden="true">January 2014</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AOP/" style="font-size: 10px;">AOP</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/JSP/" style="font-size: 10px;">JSP</a> <a href="/tags/JavaEE/" style="font-size: 17.5px;">JavaEE</a> <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/Kotlin/" style="font-size: 10px;">Kotlin</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/MySql/" style="font-size: 17.5px;">MySql</a> <a href="/tags/Mybatis/" style="font-size: 12.5px;">Mybatis</a> <a href="/tags/Nginx/" style="font-size: 12.5px;">Nginx</a> <a href="/tags/NoSQL/" style="font-size: 10px;">NoSQL</a> <a href="/tags/RPC/" style="font-size: 10px;">RPC</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Schedule/" style="font-size: 10px;">Schedule</a> <a href="/tags/Servlet/" style="font-size: 10px;">Servlet</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/Solr/" style="font-size: 10px;">Solr</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/Springmvc/" style="font-size: 10px;">Springmvc</a> <a href="/tags/Struts2/" style="font-size: 15px;">Struts2</a> <a href="/tags/Swagger/" style="font-size: 10px;">Swagger</a> <a href="/tags/Tomcat/" style="font-size: 15px;">Tomcat</a> <a href="/tags/Utilities/" style="font-size: 10px;">Utilities</a> <a href="/tags/WEB/" style="font-size: 10px;">WEB</a> <a href="/tags/WINDOWS/" style="font-size: 10px;">WINDOWS</a> <a href="/tags/WorkFlow/" style="font-size: 10px;">WorkFlow</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/Zookeeper/" style="font-size: 10px;">Zookeeper</a> <a href="/tags/javaWEB/" style="font-size: 10px;">javaWEB</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.zhangsun.site" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2014
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

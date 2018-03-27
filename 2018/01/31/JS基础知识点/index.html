@@ -1,0 +1,439 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="土豆就是我">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://mrzhangsun.github.io">
+    <!--SEO-->
+
+<meta name="description" content="描述一下你的土豆"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>JS基础知识点 | 土豆就是我</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="土豆就是我" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="JS基础知识点">
+            
+	            JS基础知识点
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/JS">
+               JS
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/01/31</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h4 id="什么是JS中的闭包"><a href="#什么是JS中的闭包" class="headerlink" title="什么是JS中的闭包"></a>什么是JS中的闭包</h4><p>闭包就是能够读取其他函数内部变量的函数</p>
+<pre><code>function foo(x) {
+    var tmp = 3;
+    return function (y) {
+    alert(x + y + (++tmp));
+    }
+}
+var bar = foo(2); // bar 现在是一个闭包
+bar(10);
+</code></pre><p>&emsp;&emsp;由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成“定义在一个函数内部的函数</p>
+<h4 id="JS的数据类型"><a href="#JS的数据类型" class="headerlink" title="JS的数据类型"></a>JS的数据类型</h4><pre><code>1.基本数据类型:String,Boolean,Number,Undefined, NULL
+2.引用数据类型:Object(Array,Date,RegExp,Function)
+</code></pre><h4 id="获取页面中所有的input"><a href="#获取页面中所有的input" class="headerlink" title="获取页面中所有的input"></a>获取页面中所有的input</h4><pre><code>var domList = document.getElementsByTagName(‘input’)
+</code></pre><h4 id="什么是Ajax和JSON，它们的优缺点"><a href="#什么是Ajax和JSON，它们的优缺点" class="headerlink" title="什么是Ajax和JSON，它们的优缺点"></a>什么是Ajax和JSON，它们的优缺点</h4><pre><code>Ajax是异步的Javascript和XML,用于WEB页面中异步数据交互
+优点:
+    1.使得用户在不刷新页面的情况下加载数据,提高用户的体验性
+    2.在不重载页面的情况下加载局部数据,减少数据的交互量  
+缺点:
+    1.存在安全问题
+    2.对搜索引擎支持不好
+    3.一些手持设备目前还不支持  
+</code></pre><p> Json是一个轻量级的数据交互格式,ECMA的一个子集,所以js支持性好</p>
+<pre><code>优点:
+    1.轻量级,易于人编写和阅读
+    2.是ECMA的一个子集,和js结合好,便于解析
+</code></pre><h4 id="什么是eval-函数"><a href="#什么是eval-函数" class="headerlink" title="什么是eval()函数"></a>什么是eval()函数</h4><p>此函数是将json格式的字符串转换成JavaScript对象</p>
+<h4 id="JS遍历Json数据"><a href="#JS遍历Json数据" class="headerlink" title="JS遍历Json数据"></a>JS遍历Json数据</h4><pre><code>var data=[{name:&quot;a&quot;,age:12},{name:&quot;b&quot;,age:11},{name:&quot;c&quot;,age:13},{name:&quot;d&quot;,age:14}];
+for(var o in data){
+    alert(o);
+    alert(data[o]);
+    alert(&quot;text:&quot;+data[o].name+&quot; value:&quot;+data[o].age );
+}
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function text(){
+        var json = {&quot;options&quot;:&quot;[{/&quot;text/&quot;:/&quot;王家湾/&quot;,/&quot;value/&quot;:/&quot;9/&quot;},{/&quot;text/&quot;:/&quot;李家湾/&quot;,/&quot;value/&quot;:/&quot;10/&quot;},{/&quot;text/&quot;:/&quot;邵家湾/&quot;,/&quot;value/&quot;:/&quot;13/&quot;}]&quot;}
+        json = eval(json.options)
+        for(var i=0; i&lt;json.length; i++){
+            alert(json[i].text+&quot; &quot; + json[i].value)
+        }
+    }
+&lt;/script&gt;
+</code></pre><h4 id="Ajax技术原理"><a href="#Ajax技术原理" class="headerlink" title="Ajax技术原理"></a>Ajax技术原理</h4><p>&emsp;&emsp;Ajax是通过XMLHTTPRequest对象异步向服务器端发送请求,服务器端接收请求处理,返回XML或者JSON数据</p>
+<h4 id="Ajax的执行步骤"><a href="#Ajax的执行步骤" class="headerlink" title="Ajax的执行步骤"></a>Ajax的执行步骤</h4><p>1.创建XMLHTTPRequest对象<br>2.监听 onreadystatechange事件<br>3.打开连接<br>4.发送请求</p>
+<pre><code>function Ustbwuyi() {
+    var data = document.getElementById(&quot;username&quot;).value;
+    CreateXmlHttp();
+    if (!xmlhttp) {
+    alert(&quot;创建xmlhttp对象异常！&quot;);
+    return false;
+    }
+
+    xmlhttp.open(&quot;POST&quot;, url, false);
+
+    xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4) {
+        document.getElementById(&quot;user1&quot;).innerHTML = &quot;数据正在加载...&quot;;
+        if (xmlhttp.status == 200) {
+            document.write(xmlhttp.responseText);
+        }
+    }
+    }
+    xmlhttp.send();
+}
+</code></pre><p>XmlHttpRequest对象解析:<br>　　   它的属性有：<br>  　　  onreadystatechange  每次状态改变所触发事件的事件处理程序。<br>  　　  responseText     从服务器进程返回数据的字符串形式。<br>  　　  responseXML    从服务器进程返回的DOM兼容的文档数据对象。<br>  　　  status           从服务器返回的数字代码，比如常见的404（未找到）和200（已就绪）<br>  　　  status Text       伴随状态码的字符串信息<br>  　　  readyState       对象状态值<br>　　　　0 (未初始化) 对象已建立，但是尚未初始化（尚未调用open方法）<br>　　　　1 (初始化) 对象已建立，尚未调用send方法<br>　　　　2 (发送数据) send方法已调用，但是当前的状态及http头未知<br>　　　　3 (数据传送中) 已接收部分数据，因为响应及http头不全，这时通过responseBody和responseText获取部分数据会出现错误，<br>　　　　4 (完成) 数据接收完毕,此时可以通过通过responseXml和responseText获取完整的回应数据</p>
+<p>定义js对象和属性</p>
+<pre><code>var person = function(){};
+var p = persopn.prototype;
+p.name=&apos;张三&apos;;
+page=18;
+p.add = function() {
+    alert(&quot;HELLO&quot;);
+}
+</code></pre>
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Murphy</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/01/31/Java多线程/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2018/01/30/Tomcat端口配置及原理详解/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="https://github.com/MrZhangsun" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/"><i class="fa" aria-hidden="true">February 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/"><i class="fa" aria-hidden="true">January 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/"><i class="fa" aria-hidden="true">December 2016</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/"><i class="fa" aria-hidden="true">August 2016</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/"><i class="fa" aria-hidden="true">July 2016</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/"><i class="fa" aria-hidden="true">April 2016</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/"><i class="fa" aria-hidden="true">March 2016</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/"><i class="fa" aria-hidden="true">February 2016</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/"><i class="fa" aria-hidden="true">January 2016</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/"><i class="fa" aria-hidden="true">December 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/"><i class="fa" aria-hidden="true">November 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/"><i class="fa" aria-hidden="true">July 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/"><i class="fa" aria-hidden="true">June 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/"><i class="fa" aria-hidden="true">May 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/"><i class="fa" aria-hidden="true">April 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/"><i class="fa" aria-hidden="true">March 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/"><i class="fa" aria-hidden="true">December 2014</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/"><i class="fa" aria-hidden="true">November 2014</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/"><i class="fa" aria-hidden="true">August 2014</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/"><i class="fa" aria-hidden="true">April 2014</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/"><i class="fa" aria-hidden="true">March 2014</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/"><i class="fa" aria-hidden="true">January 2014</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AOP/" style="font-size: 10px;">AOP</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/JSP/" style="font-size: 10px;">JSP</a> <a href="/tags/JavaEE/" style="font-size: 17.5px;">JavaEE</a> <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/Kotlin/" style="font-size: 10px;">Kotlin</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/MySql/" style="font-size: 17.5px;">MySql</a> <a href="/tags/Mybatis/" style="font-size: 12.5px;">Mybatis</a> <a href="/tags/Nginx/" style="font-size: 12.5px;">Nginx</a> <a href="/tags/NoSQL/" style="font-size: 10px;">NoSQL</a> <a href="/tags/RPC/" style="font-size: 10px;">RPC</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Schedule/" style="font-size: 10px;">Schedule</a> <a href="/tags/Servlet/" style="font-size: 10px;">Servlet</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/Solr/" style="font-size: 10px;">Solr</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/Springmvc/" style="font-size: 10px;">Springmvc</a> <a href="/tags/Struts2/" style="font-size: 15px;">Struts2</a> <a href="/tags/Swagger/" style="font-size: 10px;">Swagger</a> <a href="/tags/Tomcat/" style="font-size: 15px;">Tomcat</a> <a href="/tags/Utilities/" style="font-size: 10px;">Utilities</a> <a href="/tags/WEB/" style="font-size: 10px;">WEB</a> <a href="/tags/WINDOWS/" style="font-size: 10px;">WINDOWS</a> <a href="/tags/WorkFlow/" style="font-size: 10px;">WorkFlow</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/Zookeeper/" style="font-size: 10px;">Zookeeper</a> <a href="/tags/javaWEB/" style="font-size: 10px;">javaWEB</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.zhangsun.site" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2014
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
