@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>归档：2017/2 | 土豆就是我</title>
+<title>Redis为什么快 | 土豆就是我</title>
 
 
     <link rel="alternate" href="/atom.xml" title="土豆就是我" type="application/atom+xml">
@@ -123,27 +123,88 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">2017年 2月</h1>
-        
-          <li class="post-items" _href="/2017/02/22/CGLIB动态代理/">
-            <h3 class="post-item-title">
-            	<a href="/2017/02/22/CGLIB动态代理/"> CGLIB动态代理 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/02/21/Nginx反向代理和负载均衡/">
-            <h3 class="post-item-title">
-            	<a href="/2017/02/21/Nginx反向代理和负载均衡/"> Nginx反向代理和负载均衡 </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Redis为什么快">
+            
+	            Redis为什么快
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Redis">
+               Redis
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/03/28</span>
+    </span>
 </div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Redis是一个单进程、单线程的NOSQL数据库，但是官方却声称，Redis可以实现100000+的QPS，实践证明确实可以达到如此快的速度。那么一个单线程单进程的数据库是如何实现如此快的查询呢？</p>
+<h3 id="Redis快的原因"><a href="#Redis快的原因" class="headerlink" title="Redis快的原因"></a>Redis快的原因</h3><ul>
+<li>Redis是一个基于内存的数据库<br>大家都知道内存的读写数据速度是非常快的，那么实际上到底有多快呢？小编也没有测过，从互联网上抄来一组数据来说明一下问题：<br><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fps8z90i89j30hs09i3z6.jpg" alt=""></li>
+<li>Redis采用的是Key/Value形式的存储结构<br>Key/Value形式的数据形式在读取和写入的时候都比较简单，能进行快速的查询。</li>
+<li>Redis采用了多IO复用机制</li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Murphy</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/02/01/Java面试知识点总结/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
 
 
 
